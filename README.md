@@ -13,21 +13,17 @@ Each instruction is composed by the opcode plus a parameter (not present in all 
 
 ### I/O
 ```READ```
-    
-    Read an integer value from the input tape and store it in the accumulator.
+- Read an integer value from the input tape and store it in the accumulator.
 
 ```WRITE```
-
-    Write the integer value stored in the accumulator on the screen.
+- Write the integer value stored in the accumulator on the screen.
 
 ### Memory
 ```LOAD x```
-
-    Load the value stored at memory location x in the accumulator.
+- Load the value stored at memory location x in the accumulator.
 
 ```STORE x```
-
-    Store a value from the accumulator to memory location x.
+- Store a value from the accumulator to memory location x.
 
 ### Arithmetic
 ```ADD x```
@@ -37,13 +33,11 @@ Each instruction is composed by the opcode plus a parameter (not present in all 
 ```MULT x```
 
 ```DIV x```
-
-    Perform an arithmetic operation where the first operand is the accumulator, the second operand is the value stored at memory location x and the result is saved in the accumulator.
+- Perform an arithmetic operation where the first operand is the accumulator, the second operand is the value stored at memory location x and the result is saved in the accumulator.
 
 ### Branching
 ```BR x```
-
-    Unconditional jump to line x (where 1 is the first line).
+- Unconditional jump to line x (where 1 is the first line).
 
 ```BEQ x```
 
@@ -56,26 +50,21 @@ Each instruction is composed by the opcode plus a parameter (not present in all 
 ```BG x```
 
 ```BGE x```
-
-    Jump to line x if accumulator is equal to / not equal to / greater than / greater or equal to / less than / less or equal to 0.
+- Jump to line x if accumulator is equal to / not equal to / greater than / greater or equal to / less than / less or equal to 0.
 
 ### Other
 ```END```
-
-    End the program.
+- End the program.
 
 ### Addressing modes
 ```OP x```
-
-    Direct addressing: get the value stored at memory location x.
+- Direct addressing: get the value stored at memory location x.
 
 ```OP @x``` or ```OP@ x```
-
-    Indirect addressing: get the value stored at the address specified in the memory location x.
+- Indirect addressing: get the value stored at the address specified in the memory location x.
 
 ```OP =x``` or ```OP= x```
-
-    Explicit addressing: use x as parameter.
+- Explicit addressing: use x as parameter.
 
 Arithmetic and memory instructions can use all of these addressing modes, except ```STORE =x``` since it does not make sense.
 
